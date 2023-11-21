@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, FormEvent } from 'react';
 import { CommentField } from '../CommentField/CommentField';
 import { Comment } from '../Comment/Comment';
 import TeriTeri from '../../assets/teri-teri.webp';
@@ -24,6 +24,27 @@ export const Post = () => {
         e.target.setCustomValidity('Esse campo é obrigatório!');
     };
 
+    const handleAddComment = (e: FormEvent) => {
+        e.preventDefault();
+
+        setComments([
+            ...commnets,
+            {
+                id: commnets.length + 1,
+                author: 'Felipe Carvalho',
+                avatar_url: 'https://github.com/felipepinha.png',
+                content: newComment,
+            },
+        ]);
+
+        setNewComment('');
+    };
+
+    const deleteComment = (id: number) => {
+        const commentsWithoutDeleted = commnets.filter(comment => comment.id !== id);
+        setComments(commentsWithoutDeleted);
+    };
+
     return (
         <article className="post">
             <header>
@@ -43,7 +64,7 @@ export const Post = () => {
                 <span>#Manteiga</span>
             </div>
 
-            <form>
+            <form onSubmit={handleAddComment}>
                 <CommentField
                     onChange={handleChangeNewComment}
                     value={newComment}
@@ -59,7 +80,7 @@ export const Post = () => {
             </form>
 
             {commnets.map(comment => (
-                <Comment comment={comment} />
+                <Comment comment={comment} deleteComment={deleteComment} />
             ))}
         </article>
     );
