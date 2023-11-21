@@ -1,0 +1,67 @@
+@import '../../styles/theme';
+
+.comment {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+
+    img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 0.8rem;
+        border: 0.2rem solid $green-500;
+        padding: 0.1rem;
+    }
+}
+
+.comment-box {
+    background-color: $gray-600;
+    padding: 1rem;
+    border-radius: 0.8rem;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        strong {
+            font-size: 1.2rem;
+            color: $gray-300;
+        }
+
+        span {
+            color: $red-500;
+            cursor: pointer;
+        }
+    }
+
+    p {
+        color: $gray-300;
+        font-size: 1.3rem;
+    }
+}
+
+.comment-content {
+    width: 100%;
+
+    footer {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: $gray-400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            svg {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

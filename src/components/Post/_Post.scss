@@ -65,11 +65,20 @@ form {
         width: 10rem;
         margin-top: 1rem;
         font-weight: 700;
-        cursor: pointer;
+        cursor: not-allowed;
         transition: background-color 0.2s ease;
 
         &:hover {
-            background-color: $green-300;
+            background-color: $red-500;
+        }
+
+        &.enable {
+            cursor: pointer;
+            background-color: $green-500;
+
+            &:hover {
+                background-color: $green-300;
+            }
         }
     }
 }
