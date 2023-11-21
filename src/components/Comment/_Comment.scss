@@ -1,7 +1,7 @@
 @import '../../styles/theme';
 
 .comment {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
     display: flex;
     gap: 1rem;
 
@@ -62,4 +62,21 @@
             }
         }
     }
+}
+
+.reply-content {
+    .reply-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .cancel-reply {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.comment-replys {
+    margin-left: 5rem;
 }

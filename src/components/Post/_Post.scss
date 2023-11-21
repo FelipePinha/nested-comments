@@ -51,32 +51,6 @@
     }
 }
 
-form {
-    margin-top: 2rem;
-
-    button[type='submit'] {
-        background-color: $green-500;
-        color: $white;
-        border: none;
-        border-radius: 0.8rem;
-        padding: 1rem;
-        width: 10rem;
-        margin-top: 1rem;
-        font-weight: 700;
-        cursor: not-allowed;
-        transition: background-color 0.2s ease;
-
-        &:hover {
-            background-color: $red-500;
-        }
-
-        &.enable {
-            cursor: pointer;
-            background-color: $green-500;
-
-            &:hover {
-                background-color: $green-300;
-            }
-        }
-    }
+.add-comment-btn {
+    margin-top: 1.5rem;
 }

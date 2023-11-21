@@ -40,11 +40,6 @@ export const Post = () => {
         setNewComment('');
     };
 
-    const deleteComment = (id: number) => {
-        const commentsWithoutDeleted = commnets.filter(comment => comment.id !== id);
-        setComments(commentsWithoutDeleted);
-    };
-
     return (
         <article className="post">
             <header>
@@ -69,9 +64,10 @@ export const Post = () => {
                     onChange={handleChangeNewComment}
                     value={newComment}
                     onInvalid={handleNewCommentInvalid}
+                    required
                 />
                 <button
-                    className={newComment ? 'enable' : ''}
+                    className="add-comment-btn"
                     disabled={!newComment ? true : false}
                     type="submit"
                 >
@@ -80,7 +76,7 @@ export const Post = () => {
             </form>
 
             {commnets.map(comment => (
-                <Comment comment={comment} deleteComment={deleteComment} />
+                <Comment key={comment.id} comment={comment} />
             ))}
         </article>
     );
