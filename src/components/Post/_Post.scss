@@ -1,0 +1,54 @@
+@import '../../styles/theme';
+
+.post {
+    background-color: $gray-700;
+    border-radius: 0.8rem;
+    padding: 2rem;
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 0.8rem;
+            border: 0.2rem solid $green-500;
+            padding: 0.2rem;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+
+            strong {
+                color: $white;
+                font-size: 1.4rem;
+            }
+
+            .role {
+                color: $gray-400;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.content {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid $gray-600;
+
+    p {
+        color: $white;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+
+    span {
+        color: $green-300;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+}

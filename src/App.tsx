@@ -1,4 +1,5 @@
 import { Header } from './components/Header/Header';
+import { Post } from './components/Post/Post';
 import { Profile } from './components/Profile/Profile';
 import './styles/App.scss';
 
@@ -9,7 +10,7 @@ function App() {
             <div className="app">
                 <Profile />
 
-                <div>Comments</div>
+                <Post />
             </div>
         </>
     );
