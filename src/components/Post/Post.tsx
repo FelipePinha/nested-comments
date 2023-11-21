@@ -1,4 +1,5 @@
 import TeriTeri from '../../assets/teri-teri.webp';
+import { CommentField } from '../CommentField/CommentField';
 import './_Post.scss';
 
 export const Post = () => {
@@ -20,6 +21,11 @@ export const Post = () => {
 
                 <span>#Manteiga</span>
             </div>
+
+            <form>
+                <CommentField />
+                <button type="submit">Comentar</button>
+            </form>
         </article>
     );
 };

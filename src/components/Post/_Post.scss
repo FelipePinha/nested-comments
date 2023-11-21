@@ -52,3 +52,24 @@
         font-size: 1.4rem;
     }
 }
+
+form {
+    margin-top: 2rem;
+
+    button[type='submit'] {
+        background-color: $green-500;
+        color: $white;
+        border: none;
+        border-radius: 0.8rem;
+        padding: 1rem;
+        width: 10rem;
+        margin-top: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: $green-300;
+        }
+    }
+}
