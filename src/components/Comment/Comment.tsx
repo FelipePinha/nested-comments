@@ -50,7 +50,7 @@ export const Comment = ({ comment }: CommentProps) => {
     };
 
     return (
-        <>
+        <section className="comment-section">
             <div className="comment">
                 <img src={comment.avatar_url} />
                 <div className="comment-content">
