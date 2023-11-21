@@ -95,6 +95,6 @@ export const Comment = ({ comment }: CommentProps) => {
                     <Comment comment={reply} />
                 ))}
             </section>
-        </>
+        </section>
     );
 };
