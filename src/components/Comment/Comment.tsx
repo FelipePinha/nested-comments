@@ -92,7 +92,7 @@ export const Comment = ({ comment }: CommentProps) => {
             </div>
             <section className="comment-replys">
                 {replys.map((reply: Comment) => (
-                    <Comment comment={reply} />
+                    <Comment key={reply.id} comment={reply} />
                 ))}
             </section>
         </section>
